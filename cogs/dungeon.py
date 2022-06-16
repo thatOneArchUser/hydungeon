@@ -307,7 +307,7 @@ class dungeon(commands.Cog):
         if str(ctx.author.id) not in grind: grind[str(ctx.author.id)] = [0, 1, False]
         if action == None:
             if str(ctx.author.id) not in grind or not grind[str(ctx.author.id)][2]: return await ctx.reply("Auto grinding is disabled. Use `.autogrind enable` to enable it")
-            return await ctx.reply(f"Level: {grind[str(ctx.author.id)][1]}\nUnclaimed coins: {grind[str(ctx.author.id)][0]}\nEnabled: {grind[str(ctx.author.id)][2]}\nEarnings: {grind[str(ctx.author.id)][1]*(100000 if grind[str(ctx.author.id)][1] < 5 else 500000 if grind[str(ctx.author.id)][1] < 10 else 1000000)}coins/hr")
+            return await ctx.reply(f"Level: {grind[str(ctx.author.id)][1]}\nUnclaimed coins: {grind[str(ctx.author.id)][0]}\nEnabled: {grind[str(ctx.author.id)][2]}\nEarnings: {grind[str(ctx.author.id)][1]*(100000 if grind[str(ctx.author.id)][1] < 5 else 500000 if grind[str(ctx.author.id)][1] < 10 else 1000000)} coins/hr")
         elif action == "enable":
             grind[str(ctx.author.id)][2] = True
             await ctx.reply("Enabled auto grinding")
