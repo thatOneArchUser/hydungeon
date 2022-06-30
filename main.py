@@ -12,3 +12,7 @@ async def on_ready():
 client.load_extension("cogs.dungeon")
 client.load_extension("cogs.e")
 client.run("imagine thinking i forgor the token here :skull:")
+
+
+
+#6274772069207573652061726368
