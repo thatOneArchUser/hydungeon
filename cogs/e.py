@@ -17,10 +17,8 @@ class e(commands.Cog):
         if isinstance(error, ignored): return
         if isinstance(error, commands.DisabledCommand): await ctx.send(f'{ctx.command} has been disabled.')
         elif isinstance(error, commands.NoPrivateMessage):
-            try:
-                await ctx.author.send(f'{ctx.command} can not be used in Private Messages.')
-            except discord.HTTPException:
-                pass       
+            try: await ctx.author.send(f'{ctx.command} can not be used in Private Messages.')
+            except discord.HTTPException: pass       
         if isinstance(error, commands.CommandOnCooldown):
             print(f"{self.gettime()}CommandOnCooldown triggered by {ctx.author} in {ctx.command}")
             if math.ceil(error.retry_after) < 60:
@@ -33,13 +31,10 @@ class e(commands.Cog):
                 if ret >= 24:
                     r = math.ceil(ret) / 24
                     await ctx.reply(f"This command is on cooldown. Please try after {r} days")
-                else:
-                    await ctx.reply(f'This command is on cooldown. Please try after {math.ceil(ret)} hours')
+                else: await ctx.reply(f'This command is on cooldown. Please try after {math.ceil(ret)} hours')
         elif isinstance(error, commands.BadArgument):
-            if ctx.command.qualified_name == 'tag list':
-                await ctx.send('I could not find that member. Please try again.')
-            else:
-                await ctx.send("Invalid argument")
+            if ctx.command.qualified_name == 'tag list': await ctx.send('I could not find that member. Please try again.')
+            else: await ctx.send("Invalid argument")
         elif isinstance(error, commands.MissingRequiredArgument): await ctx.send("Missing required argument")
         elif isinstance(error, commands.MissingPermissions): await ctx.reply("You can\'t use this")
         elif isinstance(error, commands.BotMissingPermissions): await ctx.reply("I don\'t have permissions to use this")
@@ -49,5 +44,4 @@ class e(commands.Cog):
             traceback.print_exception(type(error), error, error.__traceback__, file=sys.stderr)
 
 
-def setup(client):
-    client.add_cog(e(client))
+def setup(client): client.add_cog(e(client))
