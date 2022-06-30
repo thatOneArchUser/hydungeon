@@ -356,5 +356,4 @@ class dungeon(commands.Cog):
         with open("database/inventory.json", "w+") as f: json.dump(inventory, f)
         return await ctx.reply(f"You equipped your {item} to your {cl} gear")
 
-def setup(client:commands.Bot):
-    client.add_cog(dungeon(client))
+def setup(client:commands.Bot): client.add_cog(dungeon(client))
