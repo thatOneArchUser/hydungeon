@@ -1,0 +1,4 @@
+- update help cmd
+- fix shop
+- fix exception when do .help d (or other invalid cmds?)
+
