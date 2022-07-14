@@ -536,7 +536,7 @@ class dungeon(commands.Cog):
 
     @commands.command(name="help")
     async def p(self, ctx, command=None):
-        if command == None: e = discord.Embed(title="help", description="auction, autogrind, gear, dungeon, stats, equip, unequip, setclass, inventory, level, info", color=discord.Color.random())
+        if command == None: e = discord.Embed(title="help", description="auction, autogrind, gear, dungeon, stats, equip, unequip, setclass, inventory, level, info, slayer", color=discord.Color.random())
         elif command == "help":
             e = discord.Embed(title="help for command help", description="helps", color=discord.Color.random())
             e.set_footer(text="why tf do you even need help with this command")
@@ -551,6 +551,7 @@ class dungeon(commands.Cog):
         elif command == "inventory": e = discord.Embed(title="help for command inventory", description="shows the inventory of a user\nusage:\n.inventory user(optional)", color=discord.Color.random())
         elif command == "info": e = discord.Embed(title="help for command info", description="shows information about a dungeon floor\nusage:\n.info 1-7", color=discord.Color.random())
         elif command == "level": e = discord.Embed(title="help for command level", description="shows the class levels of a user\nusage:\n.level user(optional)", color=discord.Color.random())
+        # you have already made the slayer one but you didnt update here :skull: i added slayer in the main help tho ↑
         return await ctx.reply(embed=e)
 
     @commands.command(name="shop")
@@ -565,8 +566,7 @@ class dungeon(commands.Cog):
             a = list(qw.keys())
             l = int(len(list(qw.keys()))/3)
             prices = list()
-            for q in list(qw.values()):
-                prices.append(q[0])
+            for q in list(qw.values()): prices.append(q[0])
             q1 = q2 = q3 = str()
             l1 = l2 = l3 = list()
             q = 0
