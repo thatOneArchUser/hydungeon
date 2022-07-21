@@ -1,0 +1,9 @@
+{
+    "1": ["Bozo", ["500k", "400M"], "tiny", "*Involved in the dark arts due to his parents' insistence. Originally worked as a Circus Clown.*"],
+    "2": ["Scarf", ["1M", "375M"], "small", "*First of his class. His teacher said he will do \"great things\".*"],
+    "3": ["The Professor", ["3M", "600M"], "small", "*Despite his great technique, he failed the Masters exam three times. Works from 8 to 5. Cares about his students.*"],
+    "4": ["Thorn", ["300k (can be only damaged with spirit bow, 4 hits required)", "600k (can be only damaged with spirit bow, 6 hits required)"], "small", "*Powerful Necromancer who specializes in animals. Calls himself a vegetarian, go figure.*"],
+    "5": ["Livid", ["7M", "600M"], "medium", "*Strongly believes he will become the Lord one day. Subject of mockeries, even from his disciples.*"],
+    "6": ["Sadan", ["40M", "800m"], "medium", "*Necromancy was always strong in his family. Says he once beat a Wither in a duel. Likes to brag.*"],
+    "7": ["Necron", ["1B", "4B"], "large", "*Disciples of the Wither King. Inherited the Catacombs eons ago. Never defeated, feared by anything living AND dead.*"]
+}
