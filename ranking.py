@@ -2,7 +2,7 @@
 
 import math
 
-if mode.lower() == "normal: #100 is maximum
+if mode.lower() == "normal": #100 is maximum
     s = math.floor(100 - int(random.randint(floor / 4, floor * 4)) * 3)
     if s < 17: return rank = "D"
     elif s >= 17 and s < 34: return rank = "C"
