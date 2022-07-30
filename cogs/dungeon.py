@@ -352,9 +352,7 @@ class dungeon(commands.Cog):
         if action == "create":
             if len(list(auctions.keys())) >= 10: return await ctx.reply("the auctions queue is full")
             o = len(list(auctions.keys()))
-            if item == None: raise MissingRequiredArgument
-            if price == None: raise MissingRequiredArgument
-            if t == None: raise MissingRequiredArgument
+            if item == None or price == None or t == None: raise MissingRequiredArgument 
             inInventory = False
             for i in inventory[str(ctx.author.id)]:
                 if i[0] == item.lower() and item not in baseitems:
