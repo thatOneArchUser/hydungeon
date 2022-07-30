@@ -536,7 +536,7 @@ class dungeon(commands.Cog):
 
     @commands.command(name="help")
     async def p(self, ctx, command=None):
-        if command == None: e = discord.Embed(title="help", description="auction, autogrind, gear, dungeon, stats, equip, unequip, setclass, inventory, level, info, slayer", color=discord.Color.random())
+        if command == None: e = discord.Embed(title="help", description="auction, autogrind, gear, dungeon, stats, equip, unequip, setclass, inventory, level, info, slayer, slayerinfo, slayerlevel, sell, talisman, shop, buy", color=discord.Color.random())
         elif command == "help":
             e = discord.Embed(title="help for command help", description="helps", color=discord.Color.random())
             e.set_footer(text="why tf do you even need help with this command")
@@ -555,6 +555,10 @@ class dungeon(commands.Cog):
         elif command == "slayer": e = discord.Embed(title="help for command slayer", description="starts a slayer quest\nusage:\n`.slayer <zombie / spider / enderman> <tier (use `.help slayertiers` for quest tiers)>`", color=discord.Color.random())
         elif command == "slayerinfo": e = discord.Embed(title="help for command slayerinfo", description="shows slayer quests' information\nusage:\n`.slayerinfo <zombie / spider / enderman> <tier (use `.help slayertiers` for quest tiers)>`", color=discord.Color.random())
         elif command == "slayerlevel": e = discord.Embed(title="help for command slayerlevel", description="shows the stats of a user's slayer level\nusage:\n`.slayerlevel [user]`", color=discord.Color.random())
+        elif command == "shop": e = discord.Embed(title="help for command shop", description="shows currently avalible items in shop\nusage:\n`.shop [item]`", color=discord.Color.random())
+        elif command == "buy": e = discord.Embed(title="help for command buy", description="buy any avalible items in shop\nusage:\n`.buy <item>`", color=discord.Color.random())
+        elif command == "talisman": e = discord.Embed(title="help for command talisman", description="opens your talisbag\nusage:\n`.talisman [action]`", color=discord.Color.random())
+        elif command == "sell": e = discord.Embed(title="help for command sell", description="sell your item(s)\nusage:\n`.sell <item> <quantity>`", color=discord.Color.random())
         # others (info for arguments)
         elif command == "slayertiers": e = discord.Embed(title="slayer tiers", description="`tier` arguments for slayer command\nzombie quest tiers: 1-5\nspider quest tiers: 1-4\nenderman quest tiers: 1-4", color=discord.Color.random())
         return await ctx.reply(embed=e)
